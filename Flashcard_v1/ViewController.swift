@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    // function for loading questions and answers to the falshcards
+    func LoadQuestionsAnswers(){
+        
+    }
 }
 
