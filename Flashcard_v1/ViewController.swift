@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var questions: [String] = []  // intialize with empty string to store all questions as strings
     var answers: [String] = [] // to store all answers as strings
-    var cardIndex: Int = 0     // pointing to yhe 1st card
+    var cardIndex: Int = 0     // pointing to the 1st card
     
     
     override func viewDidLoad() { // starting point of the app
@@ -36,10 +36,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextQAction(_ sender: Any) { // added
+        cardIndex += 1   // cardIndex  = cardIndex + 1
+        if cardIndex == questions.count {  // out of boundary
+            cardIndex = 0
+        }
+        qLabel.text = questions[cardIndex]
+        aLabel.text = "?????"
     }
     
     
     @IBAction func showAAction(_ sender: Any) {  // added
+        aLabel.text = answers[cardIndex]
+        
     }
     
     
